@@ -24,7 +24,7 @@ The data have to be stored in persistent media, such as disks, not in memory
       - bid1p is the highest bid price and bid1q is the quantity at that price level. Bid2p is the second highest bid price and so on
     - All rows vs. selective rows based on query criteria
   - For a time range query, it should refer the data generated in the step (B)
-  - For example, to show an order book snapshot between time 10000 and time 11000, the order book snapshot at time 10000 should include all the order processing results from time 0 to 10000. This cannot be generated if you read order information on the fly from time 10000 only
+    - For example, to show an order book snapshot between time 10000 and time 11000, the order book snapshot at time 10000 should include all the order processing results from time 0 to 10000. This cannot be generated if you read order information on the fly from time 10000 only
 - (D) Able to handle much bigger datasets than the samples provided
 - (E) Automated tests to verify implementations
 
@@ -32,3 +32,16 @@ The data have to be stored in persistent media, such as disks, not in memory
 - 2 files for two different symbols
 - File format - epoch, order id, symbol, order side, order category, price, quantity
 - order id is unique per order book per side.
+
+## Compile and execution instruction ##
+---------------------------------
+- Python
+  - For Python, the code can be executed in a terminal directly as it will call the main function. Alternatively, an IDE (e.g. Jupyter notebook) will be better. However, the user has to define the symbol and range of query manually 
+in the .py file before querying.
+
+- C++
+  - Similar to Python, the user have to define the parameters manually before executing the code in a shell terminal or IDE. In adddition, for C++, please create folders for storing the text files with the 
+respective symbols as their folder names. This step has been taken care of in Python code.
+
+- General information
+  - Time step starts from 1 (and not 0).
