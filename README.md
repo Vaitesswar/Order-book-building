@@ -33,8 +33,14 @@ The data have to be stored in persistent media, such as disks, not in memory
 - File format - epoch, order id, symbol, order side, order category, price, quantity
 - order id is unique per order book per side.
 
+## Functions ##
+I have implemented three functions in Python namely readData, getData and insertDeleteData while I could only
+implement readData and getData methods in C++. 
+- readData function runs through the raw data once and saves the order books at regular intervals as text files in a folder. 
+- getData function helps to retrieve the order book information for the user-defined range optimally. 
+- InsertDeleteData function helps to insert a new record or delete an old record and generates the most updated order book as a text file.
+
 ## Compile and execution instruction ##
----------------------------------
 - Python
   - For Python, the code can be executed in a terminal directly as it will call the main function. Alternatively, an IDE (e.g. Jupyter notebook) will be better. However, the user has to define the symbol and range of query manually 
 in the .py file before querying.
