@@ -34,7 +34,7 @@ The data have to be stored in persistent media, such as disks, not in memory
 - order id is unique per order book per side.
 
 ## Functions ##
-I have implemented two functions in Python in C++ namely readData and getData.
+I have implemented two functions in Python and C++ namely readData and getData.
 - readData function runs through the raw data once and saves the order books at regular intervals (100 time steps) as text files in a folder. 
 - getData function helps to retrieve the order book information for the user-defined range optimally. 
 
